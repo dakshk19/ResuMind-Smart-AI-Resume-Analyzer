@@ -488,14 +488,10 @@ class ResumeApp:
             # Footer text
             st.markdown("""
             <p style='text-align: center;'>
-                Powered by <b>Streamlit</b> and <b>Google Gemini AI</b> | Developed by 
-                <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" target="_blank" style='text-decoration: none; color: #FFFFFF'>
-                    <b>Het Patel (Hunterdii)</b>
+                Powered by <b>Streamlit</b> and <b>Google Gemini AI</b> 
                 </a>
             </p>
-            <p style='text-align: center; font-size: 12px; color: #888888;'>
-                "Every star counts! If you find this project helpful, please consider starring the repo to help it reach more people."
-            </p>
+                        
             """, unsafe_allow_html=True)
 
     def load_image(self, image_name):
@@ -547,7 +543,7 @@ class ResumeApp:
         """Render the dashboard page"""
         self.dashboard_manager.render_dashboard()
 
-        st.toast("Check out these repositories: [Awesome Hacking](https://github.com/Hunterdii/Awesome-Hacking)", icon="ℹ️")
+        pass
 
 
     def render_empty_state(self, icon, message):
@@ -956,7 +952,6 @@ class ResumeApp:
                             st.success("✅ Resume generated successfully!")
 
                             # Show snowflake effect
-                            st.snow()
 
                             st.download_button(
                                 label="Download Resume 📥",
@@ -965,7 +960,7 @@ class ResumeApp:
     current_name.replace(
         ' ', '_')}_resume.docx",
                                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                on_click=lambda: st.balloons()
+                                on_click=lambda: None
                             )
                         except Exception as db_error:
                             print(
@@ -976,7 +971,6 @@ class ResumeApp:
                                 "⚠️ Resume generated but couldn't be saved to database")
                             
                             # Show balloons effect
-                            st.balloons()
 
                             st.download_button(
                                 label="Download Resume 📥",
@@ -985,7 +979,7 @@ class ResumeApp:
     current_name.replace(
         ' ', '_')}_resume.docx",
                                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                on_click=lambda: st.balloons()
+                                on_click=lambda: None
                             )
                     else:
                         st.error(
@@ -1001,7 +995,7 @@ class ResumeApp:
                 print(f"Full traceback: {traceback.format_exc()}")
                 st.error(f"❌ Error preparing resume data: {str(e)}")
 
-        st.toast("Check out these repositories: [30-Days-Of-Rust](https://github.com/Hunterdii/30-Days-Of-Rust)", icon="ℹ️")
+        pass
 
     def render_about(self):
         """Render the about page"""
@@ -1239,7 +1233,7 @@ class ResumeApp:
             </div>
         """, unsafe_allow_html=True)
 
-        st.toast("Check out these repositories: [Iriswise](https://github.com/Hunterdii/Iriswise)", icon="ℹ️")
+        pass
 
     def render_analyzer(self):
         """Render the resume analyzer page"""
@@ -1371,7 +1365,6 @@ class ResumeApp:
                             return
 
                         # Show snowflake effect
-                        st.snow()
 
                         # Save resume data to database
                         resume_data = {
@@ -2418,7 +2411,6 @@ class ResumeApp:
                                         }
                                     )
                                 # show snowflake effect
-                                st.snow()
 
                                 # Complete the progress
                                 progress_bar.progress(100)
@@ -2787,7 +2779,7 @@ class ResumeApp:
                                             file_name=f"resume_analysis_{datetime.now().strftime('%Y%m%d_%H%M')}.pdf",
                                             mime="application/pdf",
                                             width='stretch',
-                                            on_click=lambda: st.balloons()
+                                            on_click=lambda: None
                                         )
                                     else:
                                         st.error("PDF generation failed. Please try again later.")
@@ -2798,7 +2790,7 @@ class ResumeApp:
                             import traceback as tb
                             st.code(tb.format_exc())
 
-        st.toast("Check out these repositories: [Awesome Java](https://github.com/Hunterdii/Awesome-Java)", icon="ℹ️")
+        pass
 
 
     def render_home(self):
@@ -2833,7 +2825,7 @@ class ResumeApp:
         
         st.markdown('</div>', unsafe_allow_html=True)
         
-        st.toast("Check out these repositories: [AI-Nexus(AI/ML)](https://github.com/Hunterdii/AI-Nexus)", icon="ℹ️")
+        pass
 
         # Call-to-Action with Streamlit navigation
         col1, col2, col3 = st.columns([1, 1, 1])
@@ -2850,7 +2842,7 @@ class ResumeApp:
         """Render the job search page"""
         render_job_search()
 
-        st.toast("Check out these repositories: [GeeksforGeeks-POTD](https://github.com/Hunterdii/GeeksforGeeks-POTD)", icon="ℹ️")
+        pass
 
 
     def render_feedback_page(self):
@@ -2875,7 +2867,7 @@ class ResumeApp:
         with stats_tab:
             feedback_manager.render_feedback_stats()
 
-        st.toast("Check out these repositories: [TryHackMe Free Rooms](https://github.com/Hunterdii/tryhackme-free-rooms)", icon="ℹ️")
+        pass
 
 
     def show_repo_notification(self):
@@ -2904,7 +2896,7 @@ class ResumeApp:
     <div style="margin-top: 10px;">If you find this project helpful, please consider ⭐ starring the repo!</div>
 </div>
 """
-        st.sidebar.markdown(message, unsafe_allow_html=True)
+        pass
 
 
     def main(self):

@@ -259,7 +259,7 @@ class FeedbackManager:
                 """, unsafe_allow_html=True)
                 
                 # Show balloons animation
-                st.balloons()
+                pass
                 
                 # Keep success message visible
                 time.sleep(2)
