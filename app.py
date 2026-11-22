@@ -1,5 +1,5 @@
 ﻿"""
-Smart Resume AI - Main Application
+RESUMIND - Main Application
 """
 import time
 from PIL import Image
@@ -39,7 +39,7 @@ import datetime
 
 # Set page config at the very beginning
 st.set_page_config(
-    page_title="Smart Resume AI",
+    page_title="RESUMIND - Smart AI Resume Analyzer",
     page_icon="🚀",
     layout="wide"
 )
@@ -471,19 +471,7 @@ class ResumeApp:
         col1, col2, col3 = st.columns([1, 3, 1])
         
         with col2:
-            # GitHub star button with lottie animation
-            st.markdown("""
-            <div style='display: flex; justify-content: center; align-items: center; margin-bottom: 10px;'>
-                <a href='https://github.com/Hunterdii/Smart-AI-Resume-Analyzer' target='_blank' style='text-decoration: none;'>
-                    <div style='display: flex; align-items: center; background-color: #24292e; padding: 5px 10px; border-radius: 5px; transition: all 0.3s ease;'>
-                        <svg height="16" width="16" viewBox="0 0 16 16" version="1.1" style='margin-right: 5px;'>
-                            <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" fill="gold"></path>
-                        </svg>
-                        <span style='color: white; font-size: 14px;'>Star this repo</span>
-                    </div>
-                </a>
-            </div>
-            """, unsafe_allow_html=True)
+            
             
             # Footer text
             st.markdown("""
@@ -891,7 +879,7 @@ class ResumeApp:
         })
 
         # Generate Resume button
-        if st.button("Generate Resume 📄", type="primary"):
+        if st.button("Generate Resume ", type="primary"):
             print("Validating form data...")
             print(f"Session state form data: {st.session_state.form_data}")
             print(
@@ -1150,40 +1138,12 @@ class ResumeApp:
         # Hero Section
         st.markdown("""
             <div class="hero-section">
-                <h1 class="hero-title">About Smart Resume AI</h1>
+                <h1 class="hero-title">About RESUMIND</h1>
                 <p class="hero-subtitle">A powerful AI-driven platform for optimizing your resume</p>
             </div>
         """, unsafe_allow_html=True)
 
-        # Profile Section
-        st.markdown(f"""
-            <div class="profile-section">
-                <img src="{image_base64 if image_base64 else 'https://avatars.githubusercontent.com/Hunterdii'}"
-                     alt="Het Patel"
-                     class="profile-image"
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/Hunterdii';">
-                <h2 class="profile-name">Het Patel (Hunterdii)</h2>
-                <p class="profile-title">Full Stack Developer & AI/ML Enthusiast</p>
-                <div class="social-links">
-                    <a href="https://github.com/Hunterdii" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:hunterdii9879@gmail.com" class="social-link" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-                <p class="bio-text">
-                    Hello! I'm a passionate Full Stack Developer with expertise in AI and Machine Learning.
-                    I created Smart Resume AI to revolutionize how job seekers approach their career journey.
-                    With my background in both software development and AI, I've designed this platform to
-                    provide intelligent, data-driven insights for resume optimization.
-                </p>
-            </div>
-        """, unsafe_allow_html=True)
-
+    
 
 
 
@@ -1193,7 +1153,7 @@ class ResumeApp:
                 <i class="fas fa-lightbulb vision-icon"></i>
                 <h2 class="vision-title">Our Vision</h2>
                 <p class="vision-text">
-                    "Smart Resume AI represents my vision of democratizing career advancement through technology.
+                    "RESUMIND represents my vision of democratizing career advancement through technology.
                     By combining cutting-edge AI with intuitive design, this platform empowers job seekers at
                     every career stage to showcase their true potential and stand out in today's competitive job market."
                 </p>
@@ -1313,7 +1273,7 @@ class ResumeApp:
 
             if uploaded_file:
                 # Add a prominent analyze button
-                analyze_standard = st.button("🔍 Analyze My Resume",
+                analyze_standard = st.button("Analyze My Resume",
                                     type="primary",
                                     width='stretch',
                                     key="analyze_standard_button")
@@ -2323,7 +2283,7 @@ class ResumeApp:
     )
             else:
                 # Add a prominent analyze button
-                analyze_ai = st.button("🤖 Analyze with AI",
+                analyze_ai = st.button("Analyze with AI",
                                 type="primary",
                                 width='stretch',
                                 key="analyze_ai_button")
@@ -2798,7 +2758,7 @@ class ResumeApp:
         
         # Hero Section
         hero_section(
-            "Smart Resume AI",
+            "RESUMIND",
             "Transform your career with AI-powered resume analysis and building. Get personalized insights and create professional resumes that stand out."
         )
         
@@ -2906,7 +2866,7 @@ class ResumeApp:
         # Admin login/logout in sidebar
         with st.sidebar:
             st_lottie(self.load_lottie_url("https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"), height=200, key="sidebar_animation")
-            st.title("Smart Resume AI")
+            st.title("RESUMIND")
             st.markdown("---")
             
             # Navigation buttons
